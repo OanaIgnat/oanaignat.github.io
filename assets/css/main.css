@@ -313,12 +313,13 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .about-profile .pro-title {
-  font-weight: 200;
   color: #50c04c;
+  font-weight: 500;
   position: relative;
   width: 200px;
   display: inline-block;
   margin-bottom: 5px;
+
 }
 
 /*.about-profile .pro-title:after {*/
