@@ -322,13 +322,13 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 }
 
-/*.about-profile .pro-title:after {*/
-/*  position: absolute;*/
-/*  content: ':';*/
-/*  color: #040404;*/
-/*  font-size: 16px;*/
-/*  !*left: 97px;*!*/
-/*}*/
+.about-profile .pro-title:after {
+  position: absolute;
+  /*content: ':';*/
+  /*color: #040404;*/
+  font-size: 16px;
+  /*left: 97px;*/
+}
 
 .about-profile .admin-sign {
   position: absolute;
@@ -409,7 +409,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .timeline li span {
-  font-size: 12px;
+  font-size: 14px;
   padding: 9px 0;
   display: block;
 }
