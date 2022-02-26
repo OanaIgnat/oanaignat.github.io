@@ -832,10 +832,14 @@ a.back-to-top:hover, a.back-to-top:focus {
   border-radius: 4px;
   background: #fff;
   position: relative;
+
 }
 
 .shot-item img {
   width: 100%;
+  /*max-width: 100%;*/
+  /*height: auto;*/
+  /*display: flex;*/
 }
 
 .shot-item .overlay {
