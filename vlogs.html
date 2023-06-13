@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  /* Style the body */
+  body {
+    margin: 55px 35px 15px 55px;
+    font-family: 'Georgia', sans-serif;
+    background: #FFFDFA;
+  }
+
+  /* Header/Logo Title */
+  .header {
+    padding: 1px;
+    text-align: center;
+    text-decoration:underline;
+
+  }
+
+  div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    column-gap: 10%;
+  }
+
+  footer {
+    padding: 3px 3px;
+    background: #B565A7;
+    color: white;
+    opacity:0.6;
+  }
+  a{
+    color: #B565A7;
+    background-color: transparent;
+    /*text-decoration: none;*/
+  }
+  h3{
+    color: #B565A7
+  }
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Human Action Understanding using Lifestyle Vlogs</title>
+</head>
+
+<body>
+
+<h1 align="center">Towards Human Action Understanding in Social Media Videos using Multimodal Models
+</h1>
+
+
+<div class="header">
+<h2 align="center">What is a Lifestyle Vlog?</h2>
+  <p> channels like YouTube.</p>
+</div>
+
+<div class="header">
+<h2 align="center">Why Lifestyle Vlogs for Human Action Understanding?</h2>
+</div>
+
+<div class="header">
+<h2 align="center">Human Action Datasets & ML Models</h2>
+</div>
+
+<img src="assets/img/tasks.png" alt="tasks" width="1000" height="auto" class="center">
+
+
+<ul class="grid-list">
+  <li>
+    <h3 align="center">WhenAct</h3>
+    <p align="center">We consider the task of <b>Temporal Human Action Localization</b> in lifestyle vlogs: (1) introduce a novel dataset of manual annotations of temporal localization for 13,000 narrated actions in 1,200 video clips; (2) present data analysis, to understand how the language and visual modalities interact; (3) propose a simple yet effective method to localize the narrated actions based on their expected duration.</p>
+    <p align="center">
+      <a href="https://arxiv.org/abs/2202.08138">Paper</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/MichiganNLP/vlog_action_localization">Code</a>
+    </p>
+  </li>
+  <li>
+    <h3 align="center">WhyAct</h3>
+    <p align="center">We consider the task of <b>Human Action Reason Identification</b> in lifestyle vlogs: (1) formalize the new task of multimodal action reason identification in online vlogs; (2) introduce the WhyAct dataset, consisting of 1,077 visual actions manually annotated with their reasons; (3) describe a multimodal model that leverages visual and textual information to automatically infer the reasons corresponding to an action presented in the video.</p>
+    <p align="center">
+      <a href="https://aclanthology.org/2021.emnlp-main.392/">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/MichiganNLP/vlog_action_reason">Code</a>
+    </p>
+
+  </li>
+  <li>
+    <h3 align="center">IfAct</h3>
+    <p align="center">We consider the task of <b>Human Action Visibility Classification</b> in lifestyle vlogs: (1) introduce a novel dataset consisting of 1,268 short video clips paired with sets of actions
+      mentioned in the video transcripts, as well as manual annotations of whether the actions are visible or not. The dataset includes a total of 14,769 actions, 4,340 of which are visible; (2) propose a set of strong baselines to determine whether an action is visible or not; (3) introduce a multimodal neural architecture that combines information drawn from visual and linguistic clues, and show that it improves over models that rely on one modality at a time.</p>
+    <p align="center">
+      <a href="https://arxiv.org/abs/1906.04236">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/MichiganNLP/vlog_action_recognition">Code</a>
+    </p>
+  </li>
+  <li>
+    <h3 align="center">CoAct</h3>
+    <p align="center">We consider the task of <b>Human Action Co-occurrence Identification</b> in lifestyle vlogs: (1) we formalize the new task of human action co-occurrence identification in online videos; (2) we introduce a new dataset, consisting of a large graph of co-occurring actions in online vlogs; (3) we propose several models to solve the task of human action co-occurrence, by using textual, visual, multi-modal, and graph-based action representations; (4) we also show that our graph representations capture novel and relevant information, across different data domains.</p>
+    <p align="center">
+      <a href="https://arxiv.org/abs/TODO">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://github.com/MichiganNLP/vlog_action_co-occurrence">Code</a>
+    </p>
+
+  </li>
+</ul>
+
+
+<!--<div class="header">-->
+<!--<h2 align="center">Analysis/ Insights</h2>-->
+<!--</div>-->
+
+<footer>
+</footer>
+
+</body>
+</html>
