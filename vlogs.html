@@ -6,14 +6,29 @@
   body {
     margin: 55px 35px 15px 55px;
     font-family: 'Georgia', sans-serif;
-    background: #FFFDFA;
+    /*background: #FFFDFA;*/
+    background: white;
+
+    font-size: 16px;
+    font-weight: 400;
+    /*line-height: 20px;*/
+    /*!*font-family: 'Open Sans', sans-serif !important;*!*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+    /*-webkit-font-smoothing: subpixel-antialiased;*/
+    color: #454545;
+    /*line-height: 25px;*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow-x: hidden;
   }
 
   /* Header/Logo Title */
   .header {
     padding: 1px;
     text-align: center;
-    text-decoration:underline;
+    /*text-decoration:underline;*/
 
   }
 
@@ -37,19 +52,38 @@
 
   footer {
     padding: 3px 3px;
-    background: #B565A7;
-    color: white;
-    opacity:0.6;
+    /*background: #50c04c;*/
+    /*color: white;*/
+    /*opacity:0.6;*/
   }
+
   a{
-    color: #B565A7;
+    color: #50c04c;
     background-color: transparent;
     /*text-decoration: none;*/
   }
-  h3{
-    color: #B565A7
+
+  h3, h2, h1{
+    color: #50c04c
   }
 
+  ul {
+    list-style: none;
+  }
+
+  img {
+    height: auto;
+    max-width: 80%;
+  }
+
+  .contributions-list li::before {
+    content: "\2022";
+    color: #50c04c;
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
+    margin-top: 1em;
+  }
 
 </style>
 
@@ -66,55 +100,105 @@
 
 <div class="header">
 <h2 align="center">What is a Lifestyle Vlog?</h2>
-  <p> channels like YouTube.</p>
+
+  <iframe id="myiframe" src="https://www.youtube.com/embed/0yGzWZ1yDjo" alt="video not available, just search my morning routine on YouTube"
+          width="auto" height="200"
+          style="margin:auto;display:block">
+  </iframe>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/1.6.2/ng2-bootstrap.umd.js"></script>
 </div>
 
 <div class="header">
 <h2 align="center">Why Lifestyle Vlogs for Human Action Understanding?</h2>
 </div>
 
+  <ul class="grid-list">
+    <li>
+      <ul class="contributions-list">
+        <li>We gather these vlogs from Youtube by performing <span style="color: #50c04c">implicit data gathering</span>.
+          We notice that explicitly searching for everyday human actions (<i>getting out of bed, open the fridge</i>) does not provide many results. Instead, we search for queries like <i>my daily routine</i> which contains most everyday life activities.</li>
+        <li><span style="color: #50c04c">High variety of actions</span> in the same video, depicted in their <span style="color: #50c04c">natural order</span> (e.g., <i>wash dishes, play piano, go to bed</i>), with rich textual descriptions of the actions, that provide <span style="color: #50c04c">context</span> (e.g. why and how the action are performed).</li>
+        <li>The human actions we obtain from the vlogs are mostly indoor, everyday life activities that can be grouped into 5 main domains: <i>Cooking, Cleaning, Personal care, Entertainment, DYI</i>. Each domain has a long tail of actions. This captures quite well the <span style="color: #50c04c">real life distribution</span> of indoor everyday life activities.</li>
+        <li>These lifestyle vlogs are very popular - tens of millions of such videos - can be <span style="color: #50c04c">a very large, actively growing data source</span>.</li>
+        <li>Models can learn about the <span style="color: #50c04c">connections between human actions and about human behaviour</span>. </li>
+        <li>Downside: The overall plotline of the video is <span style="color: #50c04c">generally aspirational</span> (<i>out of bed at 7am, cup of black coffee, cute fluffy dog</i>) - not representative for all populations. Nonetheless, the individual components (<i>getting out of bed, pouring a cup of coffee</i>) are accurate.</li>
+      </ul>
+    </li>
+    <li>
+      <img src="assets/img/gallery/thesis/vlogs.png" alt="tasks">
+    </li>
+  </ul>
+
+
+
+
+
 <div class="header">
 <h2 align="center">Human Action Datasets & ML Models</h2>
 </div>
 
-<img src="assets/img/gallery/thesis/tasks.png" alt="tasks" width="1000" height="auto" class="center">
-
-
 <ul class="grid-list">
   <li>
-    <h3 align="center">WhenAct</h3>
-    <p align="center">We consider the task of <b>Temporal Human Action Localization</b> in lifestyle vlogs: (1) introduce a novel dataset of manual annotations of temporal localization for 13,000 narrated actions in 1,200 video clips; (2) present data analysis, to understand how the language and visual modalities interact; (3) propose a simple yet effective method to localize the narrated actions based on their expected duration.</p>
+    <h3 align="center">WhenAct - Temporal Human Action Localization</h3>
+    <ul class="contributions-list">
+    <li>Dataset of manual annotations of temporal localization for 13,000 narrated actions in 1,200 video clips from lifestyle vlogs.</li>
+    <li>Multimodal model to localize the narrated actions, based on their expected duration.</li>
+    <li>Data analysis to understand how the language and visual modalities interact. </li>
+    </ul>
     <p align="center">
       <a href="https://arxiv.org/abs/2202.08138">Paper</a>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="assets/img/gallery/paper_poster/TOMM.2022.pdf">Poster</a>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/MichiganNLP/vlog_action_localization">Code</a>
     </p>
   </li>
   <li>
-    <h3 align="center">WhyAct</h3>
-    <p align="center">We consider the task of <b>Human Action Reason Identification</b> in lifestyle vlogs: (1) formalize the new task of multimodal action reason identification in online vlogs; (2) introduce the WhyAct dataset, consisting of 1,077 visual actions manually annotated with their reasons; (3) describe a multimodal model that leverages visual and textual information to automatically infer the reasons corresponding to an action presented in the video.</p>
+    <h3 align="center">WhyAct - Human Action Reason Identification</h3>
+    <ul class="contributions-list">
+      <li>New task of multimodal action reason identification in online vlogs.</li>
+      <li>Dataset of 1,077 visual actions manually annotated with their reasons.</li>
+      <li>Multimodal model that leverages visual and textual information to automatically infer the reasons corresponding to an action presented in the video. </li>
+    </ul>
+
     <p align="center">
       <a href="https://aclanthology.org/2021.emnlp-main.392/">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://lit.eecs.umich.edu/posters/EMNLP.ActionReasonsVlogs.2021.pdf">Poster</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/MichiganNLP/vlog_action_reason">Code</a>
     </p>
 
   </li>
   <li>
-    <h3 align="center">IfAct</h3>
-    <p align="center">We consider the task of <b>Human Action Visibility Classification</b> in lifestyle vlogs: (1) introduce a novel dataset consisting of 1,268 short video clips paired with sets of actions
-      mentioned in the video transcripts, as well as manual annotations of whether the actions are visible or not. The dataset includes a total of 14,769 actions, 4,340 of which are visible; (2) propose a set of strong baselines to determine whether an action is visible or not; (3) introduce a multimodal neural architecture that combines information drawn from visual and linguistic clues, and show that it improves over models that rely on one modality at a time.</p>
+    <h3 align="center">IfAct - Human Action Visibility Classification</h3>
+    <ul class="contributions-list">
+      <li>Dataset of 1,268 short video clips paired with sets of actions mentioned in the video transcripts, as well as manual annotations of whether the actions are visible in the video or not. The dataset includes a total of 14,769 actions, 4,340 of which are visible.</li>
+      <li>Strong baselines to determine whether an action is visible in the corresponding video or not. </li>
+      <li>Multimodal neural architecture that combines information drawn from visual and linguistic clues, and show that it improves over models that rely on one modality at a time.</li>
+    </ul>
     <p align="center">
       <a href="https://arxiv.org/abs/1906.04236">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://lit.eecs.umich.edu/posters/EEML.2019.ActionVlogs.poster.pdf">Poster</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/MichiganNLP/vlog_action_recognition">Code</a>
     </p>
   </li>
   <li>
-    <h3 align="center">CoAct</h3>
-    <p align="center">We consider the task of <b>Human Action Co-occurrence Identification</b> in lifestyle vlogs: (1) we formalize the new task of human action co-occurrence identification in online videos; (2) we introduce a new dataset, consisting of a large graph of co-occurring actions in online vlogs; (3) we propose several models to solve the task of human action co-occurrence, by using textual, visual, multi-modal, and graph-based action representations; (4) we also show that our graph representations capture novel and relevant information, across different data domains.</p>
+    <h3 align="center">CoAct - Human Action Co-occurrence Identification</h3>
+    <ul class="contributions-list">
+      <li>New task of human action co-occurrence identification in online videos.</li>
+      <li>Dataset, consisting of a large graph of co-occurring actions in online vlogs. </li>
+      <li>Several models to solve the task of human action co-occurrence, by using textual, visual, multi-modal, and graph-based action representations. </li>
+      <li>Our graph representations capture novel and relevant information, across different data domains.</li>
+    </ul>
     <p align="center">
       <a href="https://arxiv.org/abs/TODO">Paper</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="TODO">Poster</a>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/MichiganNLP/vlog_action_co-occurrence">Code</a>
     </p>
@@ -123,11 +207,8 @@
 </ul>
 
 
-<!--<div class="header">-->
-<!--<h2 align="center">Analysis/ Insights</h2>-->
-<!--</div>-->
-
 <footer>
+  <p align="center">For more, check out on my <a href="https://docs.google.com/presentation/d/1lVlf6GHzauFby9jkdhMLvIS5GxL5iUu172yUIF7bv7k/edit?usp=sharing">Thesis Presentation</a>!</p>
 </footer>
 
 </body>
