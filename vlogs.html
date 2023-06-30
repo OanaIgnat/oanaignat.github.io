@@ -100,14 +100,18 @@
 
 <div class="header">
 <h2 align="center">What is a Lifestyle Vlog?</h2>
+    <ul>
+      <li>Vlogs are also called <b>video blogs</b>, and are very popular in social media channels like <a href="https://www.youtube.com/">YouTube</a>.</li>
+  <li>You will see a short span of a video from our dataset, in which a person shows her bedtime activities while also describing them.</li>
+  <li>As you see, there are plenty of visual and textual descriptions of the actions depicted in the video.</li>
+      <li>Furthermore, the actions are diverse and done in a specific order: she washes the dishes, plays the piano and then writes in a journal before going to bed.</li>
+    </ul>
 
-  <iframe id="myiframe" src="https://www.youtube.com/embed/0yGzWZ1yDjo" alt="video not available, just search my morning routine on YouTube"
-          width="auto" height="200"
-          style="margin:auto;display:block">
-  </iframe>
+  <iframe width="366" height="276" src="https://www.youtube.com/embed/nFJqbmEVEws" title="Healthy Bedtime Habits (My Routine + DIY)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/1.6.2/ng2-bootstrap.umd.js"></script>
+
 </div>
 
 <div class="header">
@@ -119,7 +123,7 @@
       <ul class="contributions-list">
         <li>We gather these vlogs from Youtube by performing <span style="color: #50c04c">implicit data gathering</span>.
           We notice that explicitly searching for everyday human actions (<i>getting out of bed, open the fridge</i>) does not provide many results. Instead, we search for queries like <i>my daily routine</i> which contains most everyday life activities.</li>
-        <li><span style="color: #50c04c">High variety of actions</span> in the same video, depicted in their <span style="color: #50c04c">natural order</span> (e.g., <i>wash dishes, play piano, go to bed</i>), with rich textual descriptions of the actions, that provide <span style="color: #50c04c">context</span> (e.g. why and how the action are performed).</li>
+        <li><span style="color: #50c04c">High variety of actions</span> in the same video, depicted in their <span style="color: #50c04c">natural order</span> (e.g., <i>wash dishes, play piano, go to bed</i>), with <span style="color: #50c04c">rich textual descriptions of the actions</span>, that provide <span style="color: #50c04c">context</span> (e.g. why and how the action are performed).</li>
         <li>The human actions we obtain from the vlogs are mostly indoor, everyday life activities that can be grouped into 5 main domains: <i>Cooking, Cleaning, Personal care, Entertainment, DYI</i>. Each domain has a long tail of actions. This captures quite well the <span style="color: #50c04c">real life distribution</span> of indoor everyday life activities.</li>
         <li>These lifestyle vlogs are very popular - tens of millions of such videos - can be <span style="color: #50c04c">a very large, actively growing data source</span>.</li>
         <li>Models can learn about the <span style="color: #50c04c">connections between human actions and about human behaviour</span>. </li>
