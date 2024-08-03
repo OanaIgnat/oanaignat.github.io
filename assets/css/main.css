@@ -313,13 +313,22 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .about-profile .pro-title {
-  color:  #9F2B68;;
+  color:  #9F2B68;
   font-weight: 500;
   position: relative;
   width: 200px;
   display: inline-block;
   margin-bottom: 5px;
 
+}
+
+.pro-title-news {
+  color: #c69500;
+  font-weight: 500;
+  position: relative;
+  width: 100px;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .about-profile .pro-title:after {
