@@ -71,14 +71,19 @@ ul li, ol li {
 }
 
 .hero-sub-heading {
-  font-size: 20px;
+  text: center;
+  height: 100%;
+  font-size: 32px;
   font-weight: 400;
-  color: #e6e6e6;
-  line-height: 45px;
+  color: #9F2B68;
+  /*line-height: 45px;*/
   letter-spacing: 0.1rem;
+  /*padding-bottom: 36px;*/
+  padding-top: 45px;
+
 }
 
-.section-titile-bg {
+.section-title-bg {
   display: inline;
   font-size: 115px;
   font-weight: 700;
